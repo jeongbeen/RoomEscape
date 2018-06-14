@@ -19,13 +19,13 @@ namespace UnitTestProject1
         [TestMethod]
         public void 키의_이름과_문의_이름이_일치하면_열리는가()
         {
-            Door door = new Door("Labroom", 5, 5, 5, 3);
-
-            Key key = new Key("LabroomKey", 10, 10, 10, 3);
+            Door door = new Door("Labroom", 0, 0, 5, 3);
+            Item key = new Key("LabroomKey", 0, 0, 2, 3);
             Player player = new Player(0, 0, 0, 3, false);
 
-            bool b = door.isRightKey(key.Name);
-            if (b) door.Open();
+            player.GripItem(key);
+            player.Move(0, 0, 3);
+            player.OpenDoor(door);
 
             Assert.AreEqual(true, door.isOpened);
         }
@@ -33,18 +33,19 @@ namespace UnitTestProject1
         [TestMethod]
         public void 키의_이름과_문의_이름이_일치하지_않으면_열리지않는가()
         {
-            Door door = new Door("ClassRoom", 5, 5, 5, 3);
-            Key key = new Key("LabroomKey", 10, 10, 10, 3);
+            Door door = new Door("ClassRoom", 0, 0, 5, 3);
+            Key key = new Key("LabroomKey", 0, 0, 0, 3);
             Player player = new Player(0, 0, 0, 3, false);
 
-            bool b = door.isRightKey(key.Name);
-            if (b) door.Open();
+            player.GripItem(key);
+            player.Move(0, 0, 3);
+            player.OpenDoor(door);
 
             Assert.AreEqual(false, door.isOpened);
         }
 
         [TestMethod]
-        public void 큐브를_9개_모아야_마방진게임이_시작하는가()
+        public void 큐브를_9개_모으고_지정된_위치로_와야_마방진게임이_시작하는가()
         {
             Player player = new Player(0, 0, 0, 3, false);
             MaigcGame game = new MaigcGame();
@@ -57,7 +58,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void 큐브를_9개_모였나()
+        public void 큐브를_9개_모았나()
         {
             MaigcGame game = new MaigcGame();
 
@@ -82,23 +83,14 @@ namespace UnitTestProject1
         public void 잡은_것이_아이템일_경우만_플레이어아이템이_되는가()
         {
             Player player = new Player(0, 0, 0, 3, false);
-            HavingLocation item = new Key("Key", 0, 0, 4, 3);
+            Item item = new Key("Key", 0, 0, 4, 3);
 
-            player.CanGripItem(item);
+            player.GripItem(item);
 
             Assert.AreEqual((item as Key).Name, player.playerItem.Name);
         }
 
-        [TestMethod]
-        public void 잡은_것이_아이템이_아니라면_플레이어아이템이_되지않는가()
-        {
-            Player player = new Player(0, 0, 0, 3, false);
-            HavingLocation door = new Door("Door", 0, 0, 4, 3);
-
-            player.CanGripItem(door);
-
-            Assert.AreEqual(null, player.playerItem);
-        }
+       
 
     }
 }

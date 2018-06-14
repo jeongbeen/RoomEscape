@@ -14,7 +14,7 @@ namespace RoomEscape.Logic
             Liter = liter;
         }
 
-        public Beaker(int capacity, int liter) : base(0,0,0,3)
+        public Beaker(int capacity, int liter) : base(0,0,0,3) //비커는 위치 상관없이 생성하는게 좋을듯..
         {
             Capacity = capacity;
             Liter = liter;

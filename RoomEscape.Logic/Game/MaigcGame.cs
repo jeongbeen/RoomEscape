@@ -21,9 +21,9 @@ namespace RoomEscape.Logic
             }
         }
 
-        private List<Cube> _cubes; // 플레이어가 다른 곳에서 모은 큐브로 하자...아니면 다른 변수 만들기ㅣ? 다른변수 만들자
+        private List<Cube> _cubes; 
         private Dictionary<int, Cube> _putCubes;
-        public List<Cube> _collectedCubes; //플레이어가 게임을 할수있는 상황인지 아닌지만을 판단하기 위한 필드
+        public List<Cube> _collectedCubes; //플레이어가 게임을 할수있는 상황인지 아닌지만을 판단하기 위함
 
         public int GetNum(int num)
         {
@@ -32,7 +32,6 @@ namespace RoomEscape.Logic
 
         public void gatherCube(Cube cube)
         {
-            //밑에 조건이 이상한가?
             if (cube.X == 5) // 큐브를 스테이지 근처로 가져오면 _collectedCubes에 큐브를 추가 =>추가된 큐브가 9개여야 마방진게임을 시작할수있음!! 스테이지라는 필드..?를 만들까 아니면 특정 범위 이내에 가져올까..
                 _collectedCubes.Add(cube);
             
@@ -73,7 +72,7 @@ namespace RoomEscape.Logic
 
         public override bool canPlayGame(Player player)
         {
-            if (player.X == 0 && _collectedCubes.Count == 9) //플레이어 위치가 도착하고 모은 큐브가 9개면 게임 실행
+            if (player.X == 0 && _collectedCubes.Count == 9) //플레이어 위치가 마방진 게임 스테이지가 놓여진 책상에 도달하고 모은 큐브가 9개면 게임 실행
                 return true;
             else
                 return false;

@@ -61,7 +61,7 @@ namespace RoomEscape.Logic
 
         public override bool canPlayGame(Player player)
         {
-            if (player.X == 0)// player의 isTouched 호출해서 게임에 닿았으면 게임 실행
+            if (player.X == 0)// player의 isTouched 호출해서 게임에 닿았으면 게임 실행(비커가 놓여진 책상 근처로 왔을때 isTouched)
                 return true;
             else
                 return false;

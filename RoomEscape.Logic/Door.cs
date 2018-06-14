@@ -9,10 +9,6 @@ namespace RoomEscape.Logic
     public class Door : HavingLocation
     {
         public string RoomName { get; private set; }
-        //public float X { get; private set; }
-        //public float Y { get; private set; }
-        //public float Z { get; private set; }
-        //public float Range { get; private set; }
 
         public bool isOpened = false;
 
@@ -25,14 +21,16 @@ namespace RoomEscape.Logic
         {
             keyName = keyName.Substring(0, keyName.Length - 3);
             if (RoomName == keyName)
-                return true;
+               return true;
             else
-                return false;
+               return false;
         }
 
         public void Open()
         {
             isOpened = true; //문이열리는 애니메이션이 실행됨
         }
+
+        
     }
 }

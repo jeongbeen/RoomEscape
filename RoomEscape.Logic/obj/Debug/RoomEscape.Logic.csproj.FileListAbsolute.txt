@@ -6,7 +6,7 @@ c:\users\kcci\source\repos\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logi
 C:\Users\KCCI\source\repos\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.csprojAssemblyReference.cache
 C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\bin\Debug\RoomEscape.Logic.dll
 C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\bin\Debug\RoomEscape.Logic.pdb
-C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.csprojAssemblyReference.cache
 C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.csproj.CoreCompileInputs.cache
 C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.dll
 C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.pdb
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Logic\obj\Debug\RoomEscape.Logic.csprojResolveAssemblyReference.cache

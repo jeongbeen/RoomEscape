@@ -11,7 +11,7 @@ namespace RoomEscape.Cui
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             Director init = new Director();
             string position;
             string[] positionXYZ;
@@ -55,7 +55,7 @@ namespace RoomEscape.Cui
                         }
                     }
                 }
-            }
+            }*/
         }
     }
 }
