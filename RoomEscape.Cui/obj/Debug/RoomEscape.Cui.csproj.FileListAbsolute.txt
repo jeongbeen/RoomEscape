@@ -1,0 +1,10 @@
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.exe.config
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.exe
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.pdb
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Logic.dll
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Logic.pdb
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csproj.CoreCompileInputs.cache
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csproj.CopyComplete
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.exe
+c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.pdb
+C:\Users\KCCI\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csprojAssemblyReference.cache
