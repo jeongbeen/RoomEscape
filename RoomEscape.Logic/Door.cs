@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace RoomEscape.Logic
 {
-    public class Door:HavingLocation
+    public class Door : HavingLocation
     {
         public string RoomName { get; private set; }
-        public float X { get; private set; }
-        public float Y { get; private set; }
-        public float Z { get; private set; }
-        public float Range { get; private set;}
+        //public float X { get; private set; }
+        //public float Y { get; private set; }
+        //public float Z { get; private set; }
+        //public float Range { get; private set; }
 
         public bool isOpened = false;
-        
-        public Door(string roomName, float x, float y, float z,float r):base(x,y,z,r)
+
+        public Door(string roomName, float x, float y, float z, float r) : base(x, y, z, r)
         {
             RoomName = roomName;
         }

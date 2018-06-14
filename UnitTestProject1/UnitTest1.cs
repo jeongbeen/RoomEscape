@@ -11,11 +11,9 @@ namespace UnitTestProject1
         public void 플레이어가_특정_오브젝트를_건들때_닿았다는_결과가_참인가()
         {
             Player player = new Player(0, 0, 0, 3, false);
-            Door door = new Door("a", 2, 10, 5, 2);
+            HavingLocation door = new Door("a", 0, 0, 4, 3);
 
-            bool b = player.isTouched(player, door);
-
-            Assert.AreEqual(b, false);
+            Assert.AreEqual(true, player.isTouched(player, door));
         }
 
         [TestMethod]
@@ -26,10 +24,10 @@ namespace UnitTestProject1
             Key key = new Key("LabroomKey", 10, 10, 10, 3);
             Player player = new Player(0, 0, 0, 3, false);
 
-            bool b = door.isRightKey(key.KeyName);
+            bool b = door.isRightKey(key.Name);
             if (b) door.Open();
 
-            Assert.AreEqual(door.isOpened, true);
+            Assert.AreEqual(true, door.isOpened);
         }
 
         [TestMethod]
@@ -39,10 +37,10 @@ namespace UnitTestProject1
             Key key = new Key("LabroomKey", 10, 10, 10, 3);
             Player player = new Player(0, 0, 0, 3, false);
 
-            bool b = door.isRightKey(key.KeyName);
+            bool b = door.isRightKey(key.Name);
             if (b) door.Open();
 
-            Assert.AreEqual(door.isOpened, false);
+            Assert.AreEqual(false, door.isOpened);
         }
 
         [TestMethod]
@@ -55,7 +53,7 @@ namespace UnitTestProject1
                 game.gatherCube(new Cube(i + 1, 5, i * 2, i * 3, 3));
             }
 
-            Assert.AreEqual(game.canPlayGame(player), true);
+            Assert.AreEqual(true, game.canPlayGame(player));
         }
 
         [TestMethod]
@@ -65,7 +63,7 @@ namespace UnitTestProject1
 
             for (int i = 0; i < 9; i++)
             {
-                game.gatherCube(new Cube(i,5,5,5,5));
+                game.gatherCube(new Cube(i, 5, 5, 5, 5));
             }
 
             Assert.AreEqual(9, game._collectedCubes.Count);
@@ -77,7 +75,30 @@ namespace UnitTestProject1
             Player player = new Player(0, 0, 0, 3, false);
             BeakerGame game = new BeakerGame();
 
-            Assert.AreEqual(game.canPlayGame(player), true);
+            Assert.AreEqual(true, game.canPlayGame(player));
         }
+
+        [TestMethod]
+        public void 잡은_것이_아이템일_경우만_플레이어아이템이_되는가()
+        {
+            Player player = new Player(0, 0, 0, 3, false);
+            HavingLocation item = new Key("Key", 0, 0, 4, 3);
+
+            player.CanGripItem(item);
+
+            Assert.AreEqual((item as Key).Name, player.playerItem.Name);
+        }
+
+        [TestMethod]
+        public void 잡은_것이_아이템이_아니라면_플레이어아이템이_되지않는가()
+        {
+            Player player = new Player(0, 0, 0, 3, false);
+            HavingLocation door = new Door("Door", 0, 0, 4, 3);
+
+            player.CanGripItem(door);
+
+            Assert.AreEqual(null, player.playerItem);
+        }
+
     }
 }

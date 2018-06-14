@@ -10,9 +10,10 @@ namespace RoomEscape.Logic
     {
         public Director()
         {
-            player = new Player(0, 0, 0, 5, true);
+            player = new Player(0, 0, 0, 5, false);
             _items = new List<Item>(); // 플레이어가 가진 아이템이 아닌 게임 안에 있는 아이템들
             _doors = new List<Door>();
+            _itemss = new Dictionary<string, Item>();
 
             _items.Add(new Key("LabroomKey", 5, 5, 5, 3)); 
             _items.Add(new Key("ClassroomKey", 15, 15, 15 ,3));

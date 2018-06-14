@@ -8,11 +8,11 @@ namespace RoomEscape.Logic
 {
     public class Key : Item
     {
-        public string KeyName { get; }
+        //public string KeyName { get; }
 
-        public Key(string name, float x, float y, float z,float r) : base(name,x, y, z, r)
+        public Key(string name, float x, float y, float z, float r) : base(name, x, y, z, r)
         {
-            KeyName = name;
+            //KeyName = name;
         }
     }
 }

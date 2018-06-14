@@ -8,16 +8,16 @@ namespace RoomEscape.Logic
 {
     public class Player : HavingLocation
     {
-        public float X { get; private set; }
-        public float Y { get; private set; }
-        public float Z { get; private set; }
-        public float Range { get; private set; }
+        //public float X { get; private set; }
+        //public float Y { get; private set; }
+        //public float Z { get; private set; }
+        //public float Range { get; private set; }
 
         public bool isStopped { get; private set; }
         //public List<Item> playerItem = new List<Item>(); //아이템은 하나만 들고 다닐 수 있게 다시 변경
         public Item playerItem = new Item();
 
-        public Player(float x, float y, float z,float r, bool _isStopped):base(x,y,z,r)
+        public Player(float x, float y, float z, float r, bool _isStopped) : base(x, y, z, r)
         {
             isStopped = _isStopped;
         }
@@ -38,10 +38,9 @@ namespace RoomEscape.Logic
 
         public void Release() // 플레이어가 가진 아이템은 어차피 하나니까 매개변수 필요없음
         {
-            if(playerItem.GetType()==typeof(Cube))
+            if (playerItem.GetType() == typeof(Cube))
                 //MagicGame의 gatherCube 실행
                 playerItem = null;
-            
         }
 
         public Item CanGripItem(List<Item> items) // 유니티에서 필요..? =>isTouched의 값이 참일때 Cangrip하도록 바꾸자
@@ -60,6 +59,8 @@ namespace RoomEscape.Logic
         {
             if (isTouched(this, item) && item is Item) // 터치하고 터치한게 아이템이라면
                 playerItem = item as Item;//item(HavingLocation)을 Item형으로 캐스팅
+            else
+                playerItem = null;
         }
 
         public Door CanOpenDoor(List<Door> doors)
@@ -83,9 +84,10 @@ namespace RoomEscape.Logic
 
         public bool isTouched(Player player, HavingLocation @object) // 물건을 집거나 문을 열거나 할때 사용
         {
-            double distance = (player.X - @object.X) * (player.X - @object.X) + (player.Y - @object.Y) * (player.Y - @object.Y) + (player.Z - @object.Z) * (player.Z - @object.Z);
+            double distance = Math.Sqrt(((player.X - @object.X) * (player.X - @object.X)) + ((player.Y - @object.Y) * (player.Y - @object.Y)) + ((player.Z - @object.Z) * (player.Z - @object.Z)));
 
-            return (player.Range + @object.Range) > distance;
+            return (player.Range + @object.Range) >= distance;
         }
+
     }
 }
