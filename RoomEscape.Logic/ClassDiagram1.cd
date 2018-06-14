@@ -81,12 +81,12 @@
   <Class Name="RoomEscape.Logic.Player">
     <Position X="15.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAACAAAIAAAAAAAQAAAABABAAAAAAAABAAABAAAAA=</HashCode>
+      <HashCode>AACAAAAAAIAAAAAAAQAABAAAAAAAAAAAABQAABAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="RoomEscape.Logic.GameType">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="9.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Game\Game.cs</FileName>

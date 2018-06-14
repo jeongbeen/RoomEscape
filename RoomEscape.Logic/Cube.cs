@@ -13,11 +13,6 @@ namespace RoomEscape.Logic
             CubeNum = cubeNum;
         }
 
-        //public Cube(int cubeNum)
-        //{
-        //    CubeNum = cubeNum;
-        //}
-
         public int CubeNum { get; set; }
     }
 }

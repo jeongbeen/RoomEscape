@@ -40,6 +40,14 @@ namespace RoomEscape.Logic
                 playerItem = null;
         }
 
+        public void GripItem(HavingLocation item)
+        {
+            if (isTouched(this, item)&&item is Item)
+                playerItem = (item as Item);
+            else
+                playerItem = null;
+        }
+
         public void OpenDoor(Door door)
         {
             if (isTouched(this, door) && door.isRightKey(playerItem.Name))

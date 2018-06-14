@@ -90,7 +90,15 @@ namespace UnitTestProject1
             Assert.AreEqual((item as Key).Name, player.playerItem.Name);
         }
 
-       
+        [TestMethod]
+        public void 게임이_재시작_되었는지()
+        {
+            BeakerGame game = new BeakerGame();
 
+            game.Move("A", "B");
+            game.Restart();
+            int liter = game.GetLiter("A");
+            Assert.AreEqual(8, liter);
+        }
     }
 }
