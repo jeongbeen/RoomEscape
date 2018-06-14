@@ -100,5 +100,27 @@ namespace UnitTestProject1
             int liter = game.GetLiter("A");
             Assert.AreEqual(8, liter);
         }
+        [TestMethod]
+        public void 비커_안의_액체가_옮겨지는가()
+        {
+            BeakerGame game = new BeakerGame();
+            game.Move("A", "B");
+            Assert.AreEqual(3, game.GetLiter("A"));
+        }
+        [TestMethod]
+        public void 비커_안의_액체가_4_4로_나뉘어졌을때_게임이_종료되는가()
+        {
+            BeakerGame game = new BeakerGame();
+
+            game.Move("A", "B"); //3 5 0
+            game.Move("B", "C"); //3 2 3
+            game.Move("C", "A"); //6 2 0
+            game.Move("B", "C"); //6 0 2
+            game.Move("A", "B"); //1 5 2
+            game.Move("B", "C"); //1 4 3
+            game.Move("C", "A"); //4 4 0
+
+            Assert.AreEqual(true, game.isCompleted());
+        }
     }
 }
