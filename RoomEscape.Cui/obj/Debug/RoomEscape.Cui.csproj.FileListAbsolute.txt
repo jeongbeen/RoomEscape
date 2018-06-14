@@ -8,3 +8,13 @@ c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.cs
 c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.exe
 c:\users\kcci\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.pdb
 C:\Users\KCCI\source\repos\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csprojAssemblyReference.cache
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.exe.config
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.exe
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Cui.pdb
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Logic.dll
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\bin\Debug\RoomEscape.Logic.pdb
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csprojAssemblyReference.cache
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csproj.CoreCompileInputs.cache
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.csproj.CopyComplete
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.exe
+C:\Users\KCCI\Documents\GitHub\RoomEscape\RoomEscape.Cui\obj\Debug\RoomEscape.Cui.pdb
