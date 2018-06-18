@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RoomEscape.Logic;
 
@@ -12,7 +13,8 @@ namespace UnitTestProject1
         {
             Player player = new Player(0, 0, 0, 3, false);
             HavingLocation door = new Door("a", 0, 0, 4, 3);
-
+                                
+                                            //플레이어를 매개변수로 받아야 하나
             Assert.AreEqual(true, player.isTouched(player, door));
         }
 
@@ -48,9 +50,10 @@ namespace UnitTestProject1
         public void 큐브를_9개_모으고_지정된_위치로_와야_마방진게임이_시작하는가()
         {
             Player player = new Player(0, 0, 0, 3, false);
-            MaigcGame game = new MaigcGame();
+            MagicGame game = new MagicGame();
             for (int i = 0; i < 9; i++)
             {
+                                 //player가 큐브를 모으는게 맞을수도 없고 아닐수도 있습니다.
                 game.gatherCube(new Cube(i + 1, 5, i * 2, i * 3, 3));
             }
 
@@ -60,7 +63,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void 큐브를_9개_모았나()
         {
-            MaigcGame game = new MaigcGame();
+            MagicGame game = new MagicGame();
 
             for (int i = 0; i < 9; i++)
             {
@@ -120,7 +123,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void 마방진_게임이_완료되었는가()
         {
-            MaigcGame game = new MaigcGame();
+            MagicGame game = new MagicGame();
 
             game.Put(1, 4);
             game.Put(2, 9);
@@ -139,6 +142,16 @@ namespace UnitTestProject1
         public void 큐브를_스테이지에_두면_putCube에_들어가는가()
         {
 
+        }
+
+        [TestMethod]
+        public void 마방진을_맞추지_못_하였습니다()
+        {
+            MagicGame magicGame = new MagicGame();
+
+
+
+            
         }
     }
 }

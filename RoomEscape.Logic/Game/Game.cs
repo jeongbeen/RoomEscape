@@ -19,7 +19,7 @@ namespace RoomEscape.Logic
                 case GameType.Beaker:
                     return new BeakerGame();
                 case GameType.Magic:
-                    return new MaigcGame();
+                    return new MagicGame();
                 default:
                     throw new NotImplementedException("Game.Create");
 

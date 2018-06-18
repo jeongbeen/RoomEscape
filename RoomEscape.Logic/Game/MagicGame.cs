@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RoomEscape.Logic
 {
-    public class MaigcGame:Game
+    public class MagicGame:Game
     {
-        public MaigcGame()
+        public MagicGame()
         {
             _cubes = new List<Cube>();
             _putCubes = new Dictionary<int, Cube>();
@@ -58,6 +58,7 @@ namespace RoomEscape.Logic
 
         public override bool isCompleted()
         {
+            
             return ((_putCubes[1].CubeNum + _putCubes[5].CubeNum + _putCubes[9].CubeNum) == 15) && ((_putCubes[3].CubeNum + _putCubes[5].CubeNum + _putCubes[7].CubeNum) == 15) && ((_putCubes[1].CubeNum + _putCubes[2].CubeNum + _putCubes[3].CubeNum) == 15);
         }
 
