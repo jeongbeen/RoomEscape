@@ -149,9 +149,7 @@ namespace UnitTestProject1
         {
             MagicGame magicGame = new MagicGame();
 
-
-
-            
+           
         }
     }
 }
