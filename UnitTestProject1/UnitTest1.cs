@@ -147,8 +147,12 @@ namespace UnitTestProject1
         [TestMethod]
         public void 마방진을_맞추지_못_하였습니다()
         {
+            
             MagicGame magicGame = new MagicGame();
-
+            //가로&&세로&&대각의 값이 !=15면 magic.Restart()를 호출
+            
+            
+                
            
         }
     }
