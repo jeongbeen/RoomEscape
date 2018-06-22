@@ -135,10 +135,5 @@ namespace UnitTestProject1
             Assert.AreEqual(true, game.isCompleted());
         }
 
-        [TestMethod]
-        public void 큐브를_스테이지에_두면_putCube에_들어가는가()
-        {
-
-        }
     }
 }
