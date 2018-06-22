@@ -49,7 +49,7 @@
     <Compile Include="HavingLocation.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Key.cs" />
-    <Compile Include="Game\MaigcGame.cs" />
+    <Compile Include="Game\MagicGame.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -31,10 +31,10 @@ namespace RoomEscape.Logic
                 //MagicGame의 gatherCube 실행
                 playerItem = null;
         }
-
+        
         public void GripItem(Item item)
         {
-            if (isTouched(this, item)) 
+            if (isTouched(this, item) && playerItem == null)
                 playerItem = item;
             else
                 playerItem = null;
@@ -56,9 +56,16 @@ namespace RoomEscape.Logic
 
         public bool isTouched(Player player, HavingLocation @object) 
         {
-            double distance = Math.Sqrt(((player.X - @object.X) * (player.X - @object.X)) + ((player.Y - @object.Y) * (player.Y - @object.Y)) + ((player.Z - @object.Z) * (player.Z - @object.Z)));
+            double distance = Math.Sqrt(((X - @object.X) * (player.X - @object.X)) + ((player.Y - @object.Y) * (player.Y - @object.Y)) + ((player.Z - @object.Z) * (player.Z - @object.Z)));
 
             return (player.Range + @object.Range) >= distance;
+        }
+
+        public bool isTouched(HavingLocation @object)
+        {
+            double distance = Math.Sqrt(((X - @object.X) * (X - @object.X)) + ((Y - @object.Y) * (Y - @object.Y)) + ((Z - @object.Z) * (Z - @object.Z)));
+
+            return (Range + @object.Range) >= distance;
         }
 
     }
