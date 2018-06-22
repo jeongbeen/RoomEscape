@@ -40,17 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beaker.cs" />
+    <Compile Include="HavingLocation\Item\Beaker.cs" />
     <Compile Include="Game\BeakerGame.cs" />
-    <Compile Include="Cube.cs" />
-    <Compile Include="Door.cs" />
+    <Compile Include="HavingLocation\Item\Cube.cs" />
+    <Compile Include="HavingLocation\Door.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Director.cs" />
-    <Compile Include="HavingLocation.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Key.cs" />
+    <Compile Include="HavingLocation\HavingLocation.cs" />
+    <Compile Include="HavingLocation\Item\Item.cs" />
+    <Compile Include="HavingLocation\Item\Key.cs" />
     <Compile Include="Game\MagicGame.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="HavingLocation\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
