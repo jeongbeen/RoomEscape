@@ -10,7 +10,7 @@ namespace RoomEscape.Logic
     {   
         public BeakerGame()
         {
-            _beakers = new Dictionary<string, Beaker>();
+            _beakers = new Dictionary<string, Beaker>();    
 
             _beakers.Add("A", new Beaker(8, 8));
             _beakers.Add("B", new Beaker(5, 0));
